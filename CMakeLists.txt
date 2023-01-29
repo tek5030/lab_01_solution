@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(lab_01)
+list(PREPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 14)

@@ -19,7 +19,7 @@ add_executable(${PROJECT_NAME}
   )
 
 target_link_libraries(${PROJECT_NAME}
-  ${OpenCV_LIBS}
+  opencv::opencv
   Eigen3::Eigen
   )
 
@@ -28,3 +28,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
   CXX_STANDARD_REQUIRED ON
   CXX_STANDARD 14
   )
+
+file(COPY img_grid.png
+  DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/
+)
