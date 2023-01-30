@@ -1,11 +1,10 @@
 cmake_minimum_required( VERSION 3.5.1 )
 
 project(lab_01_eigen)
+set(exe_name lab_01_eigen)
 
 # Find libraries
 find_package(Eigen3 REQUIRED)
-
-set(exe_name lab_01_eigen)
 
 add_executable(${exe_name}
   main.cpp
@@ -26,8 +25,8 @@ set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
 target_compile_options(${exe_name} PRIVATE
   "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wpedantic;-Wshadow;-Wformat=2>>"
   "$<${msvc_cxx}:$<BUILD_INTERFACE:-W4;-MD>>"
-)
+  )
 
 target_compile_definitions(${exe_name} PUBLIC
   "$<${msvc_cxx}:-D_USE_MATH_DEFINES>"
-)
+  )
