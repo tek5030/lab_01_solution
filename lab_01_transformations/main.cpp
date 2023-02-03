@@ -54,7 +54,7 @@ int main()
   // 3. Transform images.
   //---------------------
   // Read the image.
-  cv::Mat img_orig = cv::imread("../../lab_01_transformations/img_grid.png");
+  cv::Mat img_orig = cv::imread("img_grid.png");
   if (img_orig.empty())
   {
     std::cerr << "Could not find image file" << std::endl;
